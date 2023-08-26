@@ -1,0 +1,71 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "brew install ffmpeg"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "git clone https://github.com/facefusion/facefusion"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
+      "path": "facefusion"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "facefusion"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate' : 'source env/bin/activate'}} env",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "npx --yes torchcraft@0.0.12",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install -r torchcraft.txt",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install -r requirements.txt",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Install Success",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=facefusion"
+    }
+  }]
+}

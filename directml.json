@@ -1,0 +1,31 @@
+
+  "run": [{
+    "method": "shell.start",
+    "params": {
+      "path": "facefusion"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate' : 'source env/bin/activate'}} env",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install onnxruntime-directml==1.15.1",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "python run.py --execution-providers dml"
+    }
+  }]
+}
