@@ -14,12 +14,12 @@ module.exports = {
       let session = (await kernel.loader.load(path.resolve(__dirname, "session.json"))).resolved
       return [{
         when: "start.json",
-        on: "<i class='fa-solid fa-spin fa-circle-notch'></i> Running",
+        on: "<i class='fa-solid fa-spin fa-circle-notch'></i> Running Normal Mode",
         type: "label",
         href: "start.json"
       }, {
         when: "start.json",
-        off: "<i class='fa-solid fa-power-off'></i> Launch",
+        off: "<i class='fa-solid fa-photo-film'></i> Launch Normal Mode",
         href: "start.json?fullscreen=true&run=true",
       }, {
         when: "start.json",
@@ -30,6 +30,24 @@ module.exports = {
         when: "start.json",
         on: "<i class='fa-solid fa-desktop'></i> Server",
         href: "start.json?fullscreen=true"
+      }, {
+        when: "webcam.json",
+        on: "<i class='fa-solid fa-spin fa-circle-notch'></i> Running Webcam Mode",
+        type: "label",
+        href: "webcam.json"
+      }, {
+        when: "webcam.json",
+        off: "<i class='fa-solid fa-video'></i> Launch Webcam Mode",
+        href: "webcam.json?fullscreen=true&run=true",
+      }, {
+        when: "webcam.json",
+        on: (session && session.url ? "<i class='fa-solid fa-rocket'></i> Open Web UI" : null),
+        href: (session && session.url ? session.url : null),
+        target: "_blank"
+      }, {
+        when: "webcam.json",
+        on: "<i class='fa-solid fa-desktop'></i> Server",
+        href: "webcam.json?fullscreen=true"
       }]
     } else {
       return [{
