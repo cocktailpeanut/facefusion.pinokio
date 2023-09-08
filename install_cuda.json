@@ -1,0 +1,96 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "git clone -b next https://github.com/facefusion/facefusion"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "facefusion"
+    }
+  }, {
+      "method": "shell.enter",
+      "params": {
+        "message": "{{os.platform() === 'win32' ? 'conda_hook' : 'eval \"$(conda shell.bash hook)\"'}}",
+        "on": [{
+          "event": null,
+          "return": true
+        }]
+      }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "conda create -y -p {{path.resolve(cwd, 'facefusion', 'conda_env')}}",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "conda activate {{path.resolve(cwd, 'facefusion', 'conda_env')}}",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "conda install -y cudnn cudatoolkit -c nvidia",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "conda install -y pip",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install inquirer",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "python install.py --onnxruntime cuda",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "input",
+    "params": {
+      "title": "Install Success",
+      "description": "Go back to the dashboard and launch the app!"
+    }
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "/?selected=facefusion"
+    }
+  }]
+}

@@ -27,7 +27,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "npx --yes torchcraft@0.0.13",
+      "message": "python install.py --onnxruntime openvino",
       "on": [{
         "event": null,
         "return": true
@@ -36,16 +36,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "pip install -r torchcraft.txt",
-      "on": [{
-        "event": null,
-        "return": true
-      }]
-    }
-  }, {
-    "method": "shell.enter",
-    "params": {
-      "message": "pip install -r requirements.txt",
+      "message": "",
       "on": [{
         "event": null,
         "return": true
