@@ -6,7 +6,7 @@ const exists = (filepath) => {
 }
 module.exports = {
   title: "facefusion",
-  description: "Next generation face swapper and enhancer",
+  description: "Next generation face swapper and enhancer (with GPU support)",
   icon: "icon.png",
   menu: async (kernel) => {
     let installed = await exists(path.resolve(__dirname, "facefusion", "env"))
