@@ -2,7 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone -b next https://github.com/facefusion/facefusion"
+      "message": "git clone https://github.com/facefusion/facefusion"
     }
   }, {
     "method": "shell.run",
