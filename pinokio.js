@@ -62,6 +62,10 @@ module.exports = {
         off: "<i class='fa-solid fa-photo-film'></i> Launch Normal Mode",
         href: "start_conda.json?fullscreen=true&run=true",
       }, {
+        when: "start_enhancer_conda.json",
+        off: "<i class='fa-solid fa-photo-film'></i> Launch Enhancer Mode",
+        href: "start_enhancer_conda.json?fullscreen=true&run=true",
+      }, {
         when: "start_conda.json",
         on: (session && session.url ? "<i class='fa-solid fa-rocket'></i> Open Web UI" : null),
         href: (session && session.url ? session.url : null),
