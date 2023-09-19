@@ -23,6 +23,15 @@ module.exports = {
         off: "<i class='fa-solid fa-photo-film'></i> Launch Normal Mode",
         href: "start.json?fullscreen=true&run=true",
       }, {
+        when: "start_enhancer.json",
+        on: "<i class='fa-solid fa-spin fa-circle-notch'></i> Running Enhancer Mode",
+        type: "label",
+        href: "start_enhancer.json"
+      }, {
+        when: "start_enhancer.json",
+        off: "<i class='fa-solid fa-photo-film'></i> Launch Enhancer Mode",
+        href: "start_enhancer.json?fullscreen=true&run=true",
+      }, {
         when: "start.json",
         on: (session && session.url ? "<i class='fa-solid fa-rocket'></i> Open Web UI" : null),
         href: (session && session.url ? session.url : null),
@@ -61,6 +70,11 @@ module.exports = {
         when: "start_conda.json",
         off: "<i class='fa-solid fa-photo-film'></i> Launch Normal Mode",
         href: "start_conda.json?fullscreen=true&run=true",
+      }, {
+        when: "start_enhancer_conda.json",
+        on: "<i class='fa-solid fa-spin fa-circle-notch'></i> Running Enhancer Mode",
+        type: "label",
+        href: "start_enhancer_conda.json"
       }, {
         when: "start_enhancer_conda.json",
         off: "<i class='fa-solid fa-photo-film'></i> Launch Enhancer Mode",
