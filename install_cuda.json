@@ -11,7 +11,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/facefusion/facefusion"
+      "message": "git clone https://github.com/cocktailpeanut/facefusion"
     }
   }, {
     "method": "shell.start",
@@ -75,7 +75,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "python install.py --onnxruntime cuda",
+      "message": "python install.py --onnxruntime cuda --torch cuda",
       "on": [{
         "event": null,
         "return": true

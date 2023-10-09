@@ -7,7 +7,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/facefusion/facefusion"
+      "message": "git clone https://github.com/cocktailpeanut/facefusion"
     }
   }, {
     "method": "shell.run",
@@ -32,7 +32,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "python install.py --onnxruntime openvino",
+      "message": "python install.py --onnxruntime openvino --torch cpu",
       "on": [{
         "event": null,
         "return": true
