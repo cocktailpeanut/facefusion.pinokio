@@ -32,7 +32,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "python install.py --onnxruntime coreml-silicon --torch mac",
+      "message": "python install.py --onnxruntime coreml-silicon --torch default",
       "on": [{
         "event": null,
         "return": true
