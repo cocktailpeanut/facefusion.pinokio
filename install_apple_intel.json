@@ -1,8 +1,8 @@
 {
   "requires": [{
+    "type": "conda",
     "name": "ffmpeg",
-    "uri": "ffmpeg",
-    "type": "bin"
+    "args": "-c conda-forge"
   }],
   "run": [{
     "method": "shell.run",
