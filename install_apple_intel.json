@@ -32,7 +32,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "python install.py --onnxruntime cpu --torch default",
+      "message": "python install.py --onnxruntime default --torch default",
       "on": [{
         "event": null,
         "return": true

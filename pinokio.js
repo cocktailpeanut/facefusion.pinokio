@@ -5,8 +5,8 @@ const exists = (filepath) => {
   return new Promise(r=>fs.access(filepath, fs.constants.F_OK, e => r(!e)))
 }
 module.exports = {
-  title: "facefusion",
-  description: "Next generation face swapper and enhancer (with GPU support)",
+  title: "FaceFusion",
+  description: "Next generation face swapper and enhancer",
   icon: "icon.png",
   menu: async (kernel) => {
     let installed = await exists(path.resolve(__dirname, "facefusion", "env"))
