@@ -96,7 +96,7 @@ module.exports = {
       }, {
         when: "webcam_conda.json",
         off: "<i class='fa-solid fa-video'></i> Launch Webcam Mode",
-        href: "webcam.json?fullscreen=true&run=true",
+        href: "webcam_conda.json?fullscreen=true&run=true",
       }, {
         when: "webcam_conda.json",
         on: (session && session.url ? "<i class='fa-solid fa-rocket'></i> Open Web UI" : null),
