@@ -4,6 +4,9 @@
     "name": "ffmpeg",
     "args": "-c conda-forge"
   }, {
+    "platform": "win32",
+    "name": "vs"
+  }, {
     "gpu": "nvidia",
     "name": "cuda"
   }],

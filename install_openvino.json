@@ -3,6 +3,9 @@
     "type": "conda",
     "name": "ffmpeg",
     "args": "-c conda-forge"
+  }, {
+    "platform": "win32",
+    "name": "vs"
   }],
   "run": [{
     "method": "shell.run",
