@@ -10,7 +10,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/facefusion/facefusion --branch 1.3.1 --single-branch"
+      "message": "git clone https://github.com/facefusion/facefusion --branch 2.0.0 --single-branch"
     }
   }, {
     "method": "shell.run",
